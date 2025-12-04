@@ -1,22 +1,20 @@
 package main
 
 import (
+	"bioskop/config"
 	"bioskop/database"
 	"bioskop/routers"
 	"fmt"
 )
 
-const (
-	PORT = ":8080"
-)
-
 func init() {
+	config.LoadConfig()
 	database.InitDB()
 }
 
 func main() {
 	router := routers.StartServer()
-	router.Run(PORT)
+	router.Run(config.PORT)
 
-	fmt.Println("Server berjalan di port :", PORT)
+	fmt.Println("Server berjalan di port :", config.PORT)
 }
