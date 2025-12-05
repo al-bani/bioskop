@@ -23,4 +23,8 @@ func LoadConfig() {
 	DB_PSWD = os.Getenv("PGPASSWORD")
 	DB_NAME = os.Getenv("PGDATABASE")
 	PORT = os.Getenv("PORT")
+
+	if PORT == "" {
+		PORT = ":8080"
+	}
 }
