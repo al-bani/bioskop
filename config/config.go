@@ -15,7 +15,7 @@ var (
 )
 
 func LoadConfig() {
-	godotenv.Load("config/.env")
+	godotenv.Load()
 
 	DB_HOST = os.Getenv("PGHOST")
 	DB_PORT = os.Getenv("PGPORT")
