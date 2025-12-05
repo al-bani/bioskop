@@ -16,5 +16,5 @@ func main() {
 	router := routers.StartServer()
 	router.Run(config.PORT)
 
-	fmt.Println("Server berjalan di port :", config.PORT)
+	fmt.Println("Server berjalan di port berapa bang :", config.PORT)
 }
