@@ -14,7 +14,7 @@ func init() {
 
 func main() {
 	router := routers.StartServer()
-	router.Run(config.PORT)
+	router.Run(":8080")
 
 	fmt.Println("Server berjalan di port berapa bang :", config.PORT)
 }
