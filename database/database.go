@@ -26,7 +26,7 @@ func InitDB() {
 		panic(err)
 	}
 
-	DBMigrate(DB)
+	// DBMigrate(DB)
 
 	fmt.Println("Berhasil terhubung ke database")
 }
